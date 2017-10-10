@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 public class Login extends Application {
     
+//     this static keyword holds the object of the Stage class i.e primaryStage which is accessed to close 
+//     the further displaying of the previous window in Close method.
    static Stage stage;
     
     @Override
