@@ -1,6 +1,7 @@
 package login;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,8 @@ import javafx.stage.Stage;
 
 public class Controller {
 
+    private boolean loginStatus = false;
+    
     private String usrname;
     private String passwd;
 
@@ -28,14 +31,15 @@ public class Controller {
     private TextField password;
 
     @FXML
-    public void login(ActionEvent event) throws IOException {
+    public void login(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
 
         usrname = username.getText();
-
         passwd = password.getText();
-        if (usrname.isEmpty() || passwd.isEmpty()) {
-            msg.setText("Invalid username and password.");
-        } else if (usrname.equals("bhusal1") && passwd.equals("bhusal1")) {
+        
+        Model md = new Model();
+
+        loginStatus = md.checkLogin(usrname, passwd);
+        if (loginStatus) {
          
             
         // ClosePreviousWindow
@@ -45,12 +49,14 @@ public class Controller {
         Stage primaryStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(root, 300, 250);
-        primaryStage.setTitle("bhusal1");
+        primaryStage.setTitle(usrname);
         primaryStage.setScene(scene);
         primaryStage.show();
         status.setText("Logged In.");
         }else{
             status.setText("Failed.");
+            
+             msg.setText("Invalid username and password.");
         }
 
     }
