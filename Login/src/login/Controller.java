@@ -1,15 +1,13 @@
 package login;
-
+import LoggedIn.LoggedIn;
 import java.io.IOException;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+import Register.Register;
 
 public class Controller {
 
@@ -17,9 +15,9 @@ public class Controller {
     
     private String usrname;
     private String passwd;
-
+    
     @FXML
-    private Label status;
+    private Button register;
 
     @FXML
     private Label msg;
@@ -29,16 +27,18 @@ public class Controller {
 
     @FXML
     private TextField password;
+    
 
     @FXML
-    public void login(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
+    private void login(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
 
         usrname = username.getText();
         passwd = password.getText();
         
         Model md = new Model();
-
+        
         loginStatus = md.checkLogin(usrname, passwd);
+        
         if (loginStatus) {
          
             
@@ -46,18 +46,24 @@ public class Controller {
         Login closePrevWindow = new Login();
         closePrevWindow.Close();
         
-        Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        Scene scene = new Scene(root, 300, 250);
-        primaryStage.setTitle(usrname);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        status.setText("Logged In.");
+        LoggedIn login = new LoggedIn(usrname);
+        
+        login.OnCreate();
+        
         }else{
-            status.setText("Failed.");
             
              msg.setText("Invalid username and password.");
         }
 
     }
+    
+    @FXML
+    private void Register() throws IOException{
+        
+        Register Register = new Register();
+        
+        Register.OnCreate();
+        
+    } 
+       
 }

@@ -6,69 +6,85 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="333.0" style="-fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.Controller">
    <children>
-      <VBox prefHeight="54.0" prefWidth="300.0" style="-fx-background-color: indigo;">
+      <StackPane prefHeight="40.0" prefWidth="300.0">
          <children>
-            <Label fx:id="status" contentDisplay="CENTER" text="Status" textAlignment="CENTER" textFill="#c61f1f">
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="txt" text="Login" textFill="#bd6260">
                <font>
-                  <Font size="22.0" />
+                  <Font name="System Italic" size="30.0" />
                </font>
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
             </Label>
          </children>
-      </VBox>
+      </StackPane>
+      <Label fx:id="msg" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="320.0" textAlignment="CENTER" textFill="#802d2d">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="-5.0" />
+         </VBox.margin>
+      </Label>
       <HBox prefHeight="53.0" prefWidth="300.0">
          <children>
-            <Label contentDisplay="CENTER" text="Enter Userame" textFill="#bf171b">
+            <Label contentDisplay="CENTER" style="-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );" text="Enter Userame" textFill="#1715d6">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="username" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="162.0" promptText="Username">
+            <TextField fx:id="username" alignment="TOP_CENTER" opacity="0.67" prefHeight="25.0" prefWidth="162.0" promptText="Username">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </TextField>
          </children>
+         <VBox.margin>
+            <Insets top="-5.0" />
+         </VBox.margin>
       </HBox>
       <HBox prefHeight="53.0" prefWidth="300.0">
          <children>
-            <Label contentDisplay="CENTER" text="Enter Password" textFill="#bf171b">
+            <Label contentDisplay="CENTER" style="-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );" text="Enter Password" textFill="#1715d6">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </Label>
-            <PasswordField fx:id="password" alignment="CENTER" prefHeight="29.0" prefWidth="160.0" promptText="Password">
+            <PasswordField fx:id="password" alignment="CENTER" opacity="0.7" prefHeight="25.0" prefWidth="162.0" promptText="Password">
                <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="8.0" />
+                  <Insets bottom="10.0" left="5.0" right="10.0" top="8.0" />
                </HBox.margin>
             </PasswordField>
          </children>
       </HBox>
-      <Button fx:id="login" alignment="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="105.0" text="Login" textFill="#d02222">
-         <VBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </VBox.margin>
-      </Button>
-      <Label fx:id="msg" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="254.0" textAlignment="CENTER" textFill="#bc1919">
-         <font>
-            <Font size="15.0" />
-         </font>
-         <VBox.margin>
-            <Insets bottom="10.0" left="30.0" right="10.0" top="20.0" />
-         </VBox.margin>
-      </Label>
+      <HBox prefHeight="62.0" prefWidth="341.0">
+         <children>
+            <Button fx:id="login" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="88.0" style="-fx-border-color: none;" text="Login" textFill="#1e2528">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Button>
+            <Button fx:id="register" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true" mnemonicParsing="false" onAction="#Register" prefHeight="35.0" prefWidth="98.0" text="Register" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </VBox>

@@ -1,27 +1,26 @@
 package login;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javafx.fxml.FXML;
+import javax.swing.JOptionPane;
 
-public class Model {
+class Model {
     
-    private static final Connection conn = null;
-    
-  
-    
-    
-    public boolean checkLogin(String username, String password) throws ClassNotFoundException{
+  private static final Connection conn = null;
+ 
+    @FXML
+    protected boolean checkLogin(String username, String password) throws ClassNotFoundException{
         
         try{
              
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/project","root","");
+            Connection Conn = DriverManager.getConnection("jdbc:mysql://localhost/project","root","");
              
             String query = "select * from access";
             
-            Statement st = conn.createStatement();
+            Statement st = Conn.createStatement();
             
             st.executeQuery(query);
             
@@ -35,13 +34,15 @@ public class Model {
                String DBpassword =  rs.getString("password");
                
                if(DBusername.equals(username) && DBpassword.equals(password)){
-                   System.out.println("Hello");
                    return true;
                }
             }
             
         }catch(SQLException e){
-            e.printStackTrace();
+         
+            JOptionPane.showMessageDialog(null,"Database Connection Error \n "
+                    + "Please Check Your Internet Connection", "Error ", JOptionPane.INFORMATION_MESSAGE);
+            
         }
         
         return false;

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoggedIn.Controller">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="147.0" style="-fx-background-image: url(&quot;Resources/sliderBack.jpg&quot;); -fx-background-size: cover;">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="147.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/loginIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="23.0" prefWidth="86.0" styleClass="txt" text="Welcome" textFill="#e50e99">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Settings">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Posts">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Ask Question">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Rules">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" prefHeight="400.0" prefWidth="454.0" style="-fx-background-color: #a8dbbf;">
+         <children>
+            <VBox prefHeight="154.0" prefWidth="452.0" style="-fx-border-color: green; -fx-border-radius: 3;">
+               <VBox.margin>
+                  <Insets bottom="0.5" left="0.5" right="0.5" top="0.5" />
+               </VBox.margin>
+               <children>
+                  <Label alignment="CENTER" prefHeight="31.0" prefWidth="430.0" text="User Details" textFill="#e12828">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="37.0" prefWidth="430.0">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="-10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="179.0" text="Username :">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="303.0" text="Bhusal1">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="430.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="165.0" text="Email :">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="email" alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="303.0" text="asdasdasdasd@gmail.com">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="430.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="162.0" text="Verification :">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="validStatus" alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="303.0" text="Verified">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <ButtonBar fx:id="clickme" prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button fx:id="clickme" mnemonicParsing="false" onAction="#Click" text="Button" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </children>
+</HBox>
