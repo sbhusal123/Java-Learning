@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="601.0" style="-fx-background-color: pink;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoggedIn.Controller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" style="-fx-background-color: pink;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoggedIn.Controller">
    <children>
       <VBox prefHeight="400.0" prefWidth="147.0" style="-fx-background-image: url(&quot;Resources/sliderBack.jpg&quot;); -fx-background-size: cover;">
          <children>
@@ -33,29 +33,34 @@
                   </Label>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Settings">
+            <Button mnemonicParsing="false" onAction="#buttonAction" prefHeight="35.0" prefWidth="131.0" text="Settings">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Posts">
+            <Button mnemonicParsing="false" onAction="#buttonAction" prefHeight="35.0" prefWidth="131.0" text="Posts">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Ask Question">
+            <Button mnemonicParsing="false" onAction="#buttonAction" prefHeight="35.0" prefWidth="131.0" text="Ask Question">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" text="Rules">
+            <Button mnemonicParsing="false" onAction="#buttonAction" prefHeight="35.0" prefWidth="131.0" text="Rules">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#buttonAction" prefHeight="35.0" prefWidth="131.0" text="Logout">
+               <VBox.margin>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="80.0" />
                </VBox.margin>
             </Button>
          </children>
       </VBox>
-      <VBox alignment="TOP_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="454.0" style="-fx-background-color: #a8dbbf;">
+      <VBox alignment="TOP_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="462.0" style="-fx-background-color: #a8dbbf;">
          <children>
             <VBox prefHeight="154.0" prefWidth="452.0" style="-fx-border-color: green; -fx-border-radius: 3;">
                <VBox.margin>
@@ -141,6 +146,11 @@
                   </HBox>
                </children>
             </VBox>
+            <HBox prefHeight="362.0" prefWidth="462.0" style="-fx-background-image: url(&quot;Resources/sliderBack.jpg&quot;);">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </VBox.margin>
+            </HBox>
          </children>
       </VBox>
    </children>
