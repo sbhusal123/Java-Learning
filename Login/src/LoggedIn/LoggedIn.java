@@ -1,4 +1,5 @@
 package LoggedIn;
+
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,6 +26,4 @@ public class LoggedIn {
         primaryStage.show();
         Controller.stage = primaryStage;
     }
-    
-    
 }

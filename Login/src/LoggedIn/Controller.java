@@ -5,8 +5,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import login.Login;
@@ -15,8 +17,13 @@ public class Controller {
 
     protected static String Username;
 
-    protected static Stage stage = null;
+    protected static Stage stage;
 
+    VBox update = null;
+    
+    @FXML
+    protected  VBox context;
+    
     @FXML
     protected Label btnLogout;
 
@@ -62,7 +69,8 @@ public class Controller {
                 break;
                 
                 case "Settings":
-                    System.out.println("Settings clicked");
+                    update = FXMLLoader.load(getClass().getResource("Settings.fxml"));
+                    context.getChildren().addAll(update);
                 break;
                 default:
                     System.out.println("Error");

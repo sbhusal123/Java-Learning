@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" style="-fx-background-color: pink;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoggedIn.Controller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="598.0" style="-fx-background-color: pink;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoggedIn.Controller">
    <children>
       <VBox prefHeight="400.0" prefWidth="147.0" style="-fx-background-image: url(&quot;Resources/sliderBack.jpg&quot;); -fx-background-size: cover;">
          <children>
@@ -60,98 +60,76 @@
             </Button>
          </children>
       </VBox>
-      <VBox alignment="TOP_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="462.0" style="-fx-background-color: #a8dbbf;">
+      <VBox fx:id="context" prefHeight="400.0" prefWidth="453.0">
          <children>
-            <VBox prefHeight="154.0" prefWidth="452.0" style="-fx-border-color: green; -fx-border-radius: 3;">
-               <VBox.margin>
-                  <Insets bottom="0.5" left="0.5" right="0.5" top="0.5" />
-               </VBox.margin>
+            <VBox prefHeight="98.0" prefWidth="472.0" style="-fx-background-color: lightblue; -fx-border-color: green; -fx-border-radius: 3;">
                <children>
-                  <Label alignment="CENTER" prefHeight="31.0" prefWidth="430.0" text="User Details" textFill="#e12828">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" />
-                     </VBox.margin>
+                  <Label alignment="CENTER" prefHeight="23.0" prefWidth="452.0" text="User Details" textFill="#f00015">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <HBox prefHeight="37.0" prefWidth="430.0">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" top="-10.0" />
-                     </VBox.margin>
+                  <HBox prefHeight="35.0" prefWidth="452.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="179.0" text="Username :">
-                           <HBox.margin>
-                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                           </HBox.margin>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="152.0" text="Username :">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="303.0" text="Bhusal1">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
+                        <Label fx:id="username" alignment="CENTER" prefHeight="33.0" prefWidth="293.0" text="Label">
                            <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="37.0" prefWidth="430.0">
-                     <children>
-                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="165.0" text="Email :">
-                           <HBox.margin>
-                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="email" alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="303.0" text="asdasdasdasd@gmail.com">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="15.0" />
+                              <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                      <VBox.margin>
-                        <Insets left="10.0" />
+                        <Insets top="-4.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="37.0" prefWidth="430.0">
+                  <HBox prefHeight="35.0" prefWidth="452.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="162.0" text="Verification :">
-                           <HBox.margin>
-                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                           </HBox.margin>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="152.0" text="Email :">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="validStatus" alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="303.0" text="Verified">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
+                        <Label fx:id="email" alignment="CENTER" prefHeight="33.0" prefWidth="293.0" text="Label">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                      <VBox.margin>
-                        <Insets left="10.0" />
+                        <Insets top="-4.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="452.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="152.0" text="Valid Status:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="validStatus" alignment="CENTER" prefHeight="33.0" prefWidth="293.0" text="Label">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="-4.0" />
                      </VBox.margin>
                   </HBox>
                </children>
-            </VBox>
-            <HBox prefHeight="362.0" prefWidth="462.0" style="-fx-background-image: url(&quot;Resources/sliderBack.jpg&quot;);">
                <VBox.margin>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                  <Insets bottom="0.5" left="0.5" right="0.5" top="0.5" />
                </VBox.margin>
-            </HBox>
+            </VBox>
+            <VBox prefHeight="298.0" prefWidth="451.0" />
          </children>
+         <HBox.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </HBox.margin>
       </VBox>
    </children>
 </HBox>
